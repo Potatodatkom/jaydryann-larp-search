@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LarpSearch — The Truth Is Out There</title>
+<style>
+:root{--blue:#4285f4;--red:#ea4335;--yellow:#fbbc05;--green:#34a853;--ink:#202124;--muted:#5f6368}
+*{box-sizing:border-box}
+body{margin:0;background:#fff;color:var(--ink);font:15px Arial,Helvetica,sans-serif}
+header{display:flex;align-items:center;justify-content:space-between;padding:18px 5%;border-bottom:1px solid #eee}
+.brand{font-size:22px;font-weight:700;letter-spacing:-1px}.brand span:nth-child(1){color:var(--blue)}.brand span:nth-child(2){color:var(--red)}.brand span:nth-child(3){color:var(--yellow)}.brand span:nth-child(4){color:var(--blue)}.brand span:nth-child(5){color:var(--green)}.brand span:nth-child(6){color:var(--red)}
+.badge{font-size:11px;color:#7a5a00;background:#fff4ce;border:1px solid #f2d477;border-radius:20px;padding:6px 10px}
+main{max-width:850px;margin:50px auto;padding:0 22px}
+.hero{text-align:center;margin-bottom:30px}.hero .logo{font-size:clamp(42px,10vw,68px);font-weight:700;letter-spacing:-4px;margin-bottom:12px}.hero p{color:var(--muted);margin:0}
+.search{display:flex;gap:8px;border:1px solid #dfe1e5;border-radius:28px;padding:7px 8px 7px 20px;box-shadow:0 2px 8px #00000012;max-width:650px;margin:24px auto 12px}
+.search:focus-within{box-shadow:0 2px 12px #00000024}
+input{border:0;outline:0;flex:1;min-width:0;font-size:16px}
+button{border:0;border-radius:22px;background:var(--blue);color:white;padding:11px 19px;font-weight:600;cursor:pointer}
+.hint{text-align:center;color:#777;font-size:12px;margin-bottom:34px}
+.tabs{display:flex;gap:25px;border-bottom:1px solid #eee;color:var(--muted);font-size:13px;padding:0 4px 13px;margin-bottom:22px}
+.tabs b{color:var(--blue);border-bottom:3px solid var(--blue);padding-bottom:12px;margin-bottom:-16px}
+.results{display:none}.count{font-size:12px;color:var(--muted);margin:0 0 22px}
+.result{margin:0 0 27px;max-width:650px}
+.source{font-size:12px;color:var(--muted);margin-bottom:5px}
+.result a{font-size:21px;color:#1a0dab;text-decoration:none}.result a:hover{text-decoration:underline}
+.result p{line-height:1.5;margin:6px 0;color:#4d5156}
+.knowledge{border:1px solid #dadce0;border-radius:14px;padding:18px;margin:25px 0;max-width:650px}
+.knowledge h2{font-size:22px;margin:0 0 6px}.subtitle{color:var(--muted);font-size:13px}
+.label{font-weight:700}.titles{display:flex;flex-wrap:wrap;gap:7px;margin:14px 0}
+.chip{background:#f1f3f4;border-radius:16px;padding:7px 10px;font-size:12px}
+.fact{padding:9px 0;border-top:1px solid #eee;line-height:1.45}
+.disclaimer{font-size:11px;color:#888;text-align:center;margin:50px 0 20px}
+footer{text-align:center;color:#888;font-size:12px;padding:20px;border-top:1px solid #eee}
+@media(max-width:520px){main{margin:35px auto}.search{padding-left:15px}.search button{padding:10px 13px}.tabs{gap:17px}.result a{font-size:19px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="brand"><span>L</span><span>a</span><span>r</span><span>p</span><span>S</span><span>earch</span></div>
+  <div class="badge">SATIRE SEARCH ENGINE</div>
+</header>
+<main>
+  <section class="hero">
+    <div class="logo"><span style="color:#4285f4">L</span><span style="color:#ea4335">a</span><span style="color:#fbbc05">r</span><span style="color:#4285f4">p</span><span style="color:#34a853">S</span><span style="color:#ea4335">earch</span></div>
+    <p>Searching the internet for the most important larp-related questions.</p>
+  </section>
+  <form class="search" id="searchForm">
+    <input id="query" aria-label="Search" value="Who is the leader of the LARP community?" autocomplete="off">
+    <button type="submit">Search</button>
+  </form>
+  <div class="hint">Try: “Who is the Larp God?”</div>
+  <section class="results" id="results">
+    <div class="tabs"><b>All</b><span>Images</span><span>News</span><span>Videos</span><span>More</span></div>
+    <p class="count">About 9,999,999 results (0.04 seconds) — according to absolutely nobody</p>
+
+    <article class="result">
+      <div class="source">larpsearch.example › people › jaydryann</div>
+      <a href="#profile">JayDryann Matias Alimarcan — The Larp God</a>
+      <p>Meet the legendary figure widely celebrated in this totally unofficial, completely unserious search result as the leader of the Larping Everything Community.</p>
+    </article>
+
+    <article class="result">
+      <div class="source">totally-real-larp-news.example › breaking</div>
+      <a href="#profile">BREAKING: The Larp God has entered the chat</a>
+      <p>In a development that shocked absolutely no one, JayDryann has once again claimed the title of The Official Larp Larp Larp Sahur.</p>
+    </article>
+
+    <article class="result">
+      <div class="source">Larpipedia.example › legends</div>
+      <a href="#profile">JayDryann — Larpipedia, The Free Encyclopedia of Larp</a>
+      <p>A profile of the self-proclaimed icon, community leader, and legendary larp enthusiast. Status: Unmatched. Larp level: Maximum.</p>
+    </article>
+
+    <aside class="knowledge" id="profile">
+      <h2>JayDryann Matias Alimarcan</h2>
+      <div class="subtitle">Internet legend · LARP Community figure (parody profile)</div>
+      <div class="titles">
+        <span class="chip">👑 The Larp God</span>
+        <span class="chip">🏆 Leader of the “Larping Everything Community”</span>
+        <span class="chip">🌙 The Official Larp Larp Larp Sahur</span>
+      </div>
+      <div class="fact"><span class="label">Known for:</span> Larping everything, everywhere, all at once.</div>
+      <div class="fact"><span class="label">Community:</span> Larping Everything Community</div>
+      <div class="fact"><span class="label">Official status:</span> Too legendary to verify.</div>
+      <div class="fact"><span class="label">Power level:</span> 999,999+ LARP energy</div>
+      <p style="font-size:12px;color:#777;margin:14px 0 0">This is a fictional joke profile made for fun. It is not a real biography or factual search result.</p>
+    </aside>
+
+    <article class="result">
+      <div class="source">larp-university.example › research</div>
+      <a href="#profile">Study finds: 100% of LARP roads lead to the Larp God</a>
+      <p>Researchers (one cousin and a suspicious-looking calculator) conclude that the legend is simply too powerful for ordinary rankings.</p>
+    </article>
+  </section>
+  <div class="disclaimer">LarpSearch is a parody website. Search results, publications, rankings, and profiles shown here are fictional and made for a harmless joke.</div>
+</main>
+<footer>© 2026 LarpSearch · The internet's most unserious search engine</footer>
+<script>
+const form=document.getElementById('searchForm');
+const results=document.getElementById('results');
+const input=document.getElementById('query');
+form.addEventListener('submit',e=>{e.preventDefault();results.style.display='block';window.scrollTo({top:document.querySelector('.tabs').getBoundingClientRect().top+window.scrollY-20,behavior:'smooth'});});
+window.addEventListener('load',()=>{results.style.display='block';});
+</script>
+</body>
+</html>
